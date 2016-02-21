@@ -1,0 +1,16 @@
+﻿<Window xmlns:Controls="clr-namespace:WY.Tasks.Controls"  x:Class="WY.Tasks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Style="{StaticResource  custom_title_window}">
+    <Grid>
+        <Grid Style="{StaticResource app_title_bar}" MouseMove="Grid_MouseMove_1">
+            <Label Content="任务系统" Style="{StaticResource app_title}"/>
+            <Button Style="{StaticResource close_btn}" Click="Button_Click_1"/>
+        </Grid>
+        <ScrollViewer Style="{StaticResource scrollbar_for_all}" Name="logBoxScroller">
+            <TextBlock Style="{StaticResource log_box}" Name="logBox"/>
+        </ScrollViewer>
+        <Controls:NotificationMenu x:Name="menu"/>
+    </Grid>
+
+</Window>
